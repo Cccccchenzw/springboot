@@ -1,0 +1,51 @@
+server:
+  error:
+    path: /error
+#    whitelabel:
+#      enabled: false #???????????
+  ssl: #证书https
+    key-store: sang.p12
+    key-alias: tomcathttps
+    key-store-password: changeit
+  servlet:
+    session:
+      timeout: 30m
+  tomcat:
+    uri-encoding: utf-8
+    max-connections: 500
+spring:
+  profiles:
+    active: dev
+#  mvc:
+#    pathmatch:
+#      use-suffix-pattern: true #??????? server.servlet.path?????????
+  thymeleaf:
+    cache: true
+    check-template: true
+    check-template-location: true
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+    suffix: .html
+  http:
+    encoding:
+      force-response: true  #fastjson相应编码
+  servlet:
+    multipart: #图片上传的细节配置
+      enabled: true
+      file-size-threshold: 0
+      location: D:\\czw
+      max-file-size: 1MB
+      max-request-size: 10MB
+      resolve-lazily: false
+
+czw:
+  name: 陈章文
+  number: 180878
+  boy: true
+
+maria:
+  name: 鸭鸭同学
+  money: 10000
+  girl: true

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>czw</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>猪猪名</td>
+        <td>猪猪号</td>
+        <td>猪猪靶</td>
+        <td>猪猪时</td>
+    </tr>
+    <tr th:each="czw: ${czw}">
+        <td th:text="${czw.name}"></td>
+        <td th:text="${czw.number}"></td>
+        <td th:text="${czw.boy}"></td>
+        <td th:text="${czw.date}"></td>
+    </tr>
+<!--    <tr th:each="maria: ${maria}">-->
+<!--        <td th:text="${maria.name}"></td>-->
+<!--        <td th:text="${maria.money}"></td>-->
+<!--        <td th:text="${maria.girl}"></td>-->
+<!--    </tr>-->
+</table>
+</body>
+</html>
