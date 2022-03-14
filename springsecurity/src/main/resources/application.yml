@@ -40,11 +40,22 @@ spring:
       max-request-size: 10MB
       resolve-lazily: false
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    #url: jdbc:mysql://localhost:3306/springboot?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
-    url: jdbc:mysql://localhost:3306/jpa?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
-    username: root
-    password: 123456
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    #url: jdbc:mysql://localhost:3306/springboot?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
+#    url: jdbc:mysql://localhost:3306/jpa?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
+#    username: root
+#    password: 123456
+#  配置多数据源
+    one:
+      type: com.alibaba.druid.pool.DruidDataSource
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/jpa?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
+    two:
+      type: com.alibaba.druid.pool.DruidDataSource
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/sys?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&allowMultiQueries=true
   jpa:
     show-sql: true
     database: mysql

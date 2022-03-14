@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class BookService2 {
-    @Autowired
+    @Autowired(required = false)
     BookMapper bookMapper;
 
     public int addBook(Book book){
