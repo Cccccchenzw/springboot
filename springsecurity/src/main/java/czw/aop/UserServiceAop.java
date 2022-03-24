@@ -3,7 +3,7 @@ package czw.aop;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserServiceAop {
     public String getUserById(Integer id){
         System.out.println("get......");
         return "user";
