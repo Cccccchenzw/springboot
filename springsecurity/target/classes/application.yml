@@ -81,6 +81,7 @@ spring:
 #      password: 123456
 #      roles: admin
 
+#定义常量数据
 czw:
   name: 陈章文
   number: 180878
@@ -90,3 +91,15 @@ maria:
   name: 鸭鸭同学
   money: 10000
   girl: true
+
+#  shiro配置
+shiro:
+  enabled: true
+  web:
+    enabled: true
+  loginUrl: /login #默认为“/login.jsp”
+  successUrl: /index #默认成功地址为“/”
+  unauthorizedUrl: /unauthorized
+  sessionManager: #是否允许通过Cookie实现会话跟踪
+    sessionIdCookieEnabled: true
+    sessionIdUrlRewritingEnabled: true
