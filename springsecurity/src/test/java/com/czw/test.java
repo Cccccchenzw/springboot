@@ -2,6 +2,7 @@ package com.czw;
 
 import com.sun.glass.ui.Application;
 import czw.service.BookService2;
+import czw.service.MailService;
 import czw.service.TestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,11 +21,19 @@ public class test {
     @Autowired(required = false)
     BookService2 bookService2;
 //    原因错误:Application.class的导包出错了com.sun.glass.ui.Application
+    @Autowired(required = false)
+    MailService mailService;
     @Test
     public void test01(){
         System.out.println("czw");
         testService = new TestService();
         System.out.println(testService.test("czw"));
 
+    }
+
+    @Test
+    public void test02(){
+//        java.lang.NullPointerException
+        mailService.sendSimpleMail("422892383@qq.com","422892383@qq.com","测试邮件主题","测试邮件内容");
     }
 }

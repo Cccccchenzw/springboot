@@ -1,11 +1,17 @@
 package czw.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@ApiModel(value = "用户实体类",description = "用户信息描述类")
 public class Book implements Serializable {
     private int id;
+    @ApiModelProperty(value = "用户名")
     private String name;
+    @ApiModelProperty(value = "作者名")
     private String author;
 
     public int getId() {

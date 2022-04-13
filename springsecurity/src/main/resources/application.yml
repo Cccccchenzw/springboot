@@ -14,6 +14,18 @@ server:
     uri-encoding: utf-8
     max-connections: 500
 spring:
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 422892383@qq.com
+    password: fcyqztkctnoscabi
+    default-encoding: UTF-8
+    properties:
+      mail:
+        debug: true
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
   profiles:
     active: dev
 #  mvc:
